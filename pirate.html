@@ -24,46 +24,109 @@
   <h1 style="text-align: center;">Find the treasure by Thirupathi</h1>
 </div>
 <div><b>Click on the locations to search for treasure, beware the traps</b></div>
-<div id="locations"><b>Number of locations checked is zero.</b></div>
-<div id="penalty"><b>Penalty is zero.</b></div>
-<div><b>check for help.</b></div>
-<div id="help"><b>Help report</b></div>
+<div id="locations">Number of locations checked is zero.</div>
+<div id="penalty">Penalty is zero.</div>
+<div>check for help.</div>
+<div id="help" onclick="help()">Help report</div>
 <div class="container" style="width: 500px; height: 500px;">
 <div class="row">
-  <div class="col-sm"><img class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
-  <div class="col-sm"><img class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
-  <div class="col-sm"><img class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
-  <div class="col-sm"><img class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
-  <div class="col-sm"><img class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
+  <div class="col-sm"><img id="img0" onclick="check(0)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
+  <div class="col-sm"><img id="img1" onclick="check(1)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
+  <div class="col-sm"><img id="img2" onclick="check(2)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
+  <div class="col-sm"><img id="img3" onclick="check(3)" class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
+  <div class="col-sm"><img id="img4" onclick="check(4)" class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
 </div>
 <div class="row">
-  <div class="col-sm"><img class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
-  <div class="col-sm"><img class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
-  <div class="col-sm"><img class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
-  <div class="col-sm"><img class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
-  <div class="col-sm"><img class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
+  <div class="col-sm"><img id="img5" onclick="check(5)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
+  <div class="col-sm"><img id="img6" onclick="check(6)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
+  <div class="col-sm"><img id="img7" onclick="check(7)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
+  <div class="col-sm"><img id="img8" onclick="check(8)" class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
+  <div class="col-sm"><img id="img9" onclick="check(9)" class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
 </div>
 <div class="row">
-  <div class="col-sm"><img class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
-  <div class="col-sm"><img class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
-  <div class="col-sm"><img class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
-  <div class="col-sm"><img class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
-  <div class="col-sm"><img class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
+  <div class="col-sm"><img id="img10" onclick="check(10)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
+  <div class="col-sm"><img id="img11" onclick="check(11)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
+  <div class="col-sm"><img id="img12" onclick="check(12)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
+  <div class="col-sm"><img id="img13" onclick="check(13)" class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
+  <div class="col-sm"><img id="img14" onclick="check(14)" class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
 </div>
 <div class="row">
-  <div class="col-sm"><img class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
-  <div class="col-sm"><img class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
-  <div class="col-sm"><img class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
-  <div class="col-sm"><img class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
-  <div class="col-sm"><img class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
+  <div class="col-sm"><img id="img15" onclick="check(15)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
+  <div class="col-sm"><img id="img16" onclick="check(16)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
+  <div class="col-sm"><img id="img17" onclick="check(17)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
+  <div class="col-sm"><img id="img18" onclick="check(18)" class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
+  <div class="col-sm"><img id="img19" onclick="check(19)" class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
 </div>
 <div class="row">
-  <div class="col-sm"><img class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
-  <div class="col-sm"><img class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
-  <div class="col-sm"><img class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
-  <div class="col-sm"><img class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
-  <div class="col-sm"><img class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
+  <div class="col-sm"><img id="img20" onclick="check(20)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
+  <div class="col-sm"><img id="img21" onclick="check(21)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
+  <div class="col-sm"><img id="img22" onclick="check(22)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
+  <div class="col-sm"><img id="img23" onclick="check(23)" class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
+  <div class="col-sm"><img id="img24" onclick="check(24)" class="object-fit-cover border rounded"  src="tressure_start.jpg" width="100px" height="100px"></div>
 </div>
 </div>
 </body>
+<script>
+  let ids = []
+  let checkCount = 0
+  let penalty = 0
+  let lastCheck = 0
+  let treasureLocation = 5
+  let trapLocation = 18
+  let gameOver = false
+  for (var i = 0; i < 25; i++) {
+    ids.push("img" + i);
+  }
+  function check(position) {
+    if(gameOver)
+    {
+      return 0;
+    }
+    let imgid = ids[position]
+    checkCount++
+    penalty++
+    if (position==treasureLocation) {
+      document.getElementById(imgid).src="Won_Treasure.jpg"
+      gameOver = true
+      penalty-=3
+    }
+    else if (position==trapLocation) {
+      document.getElementById(imgid).src="Danger.jpg"
+      gameOver = true
+      penalty+=4
+    } else {
+      
+    }
+    lastCheck=position
+    document.getElementById("locations").innerHTML = "Number of locations checked is "+lastCheck
+    document.getElementById("penalty").innerHTML = "Penalty is "+penalty
+  }
+  function help() {
+    let row = Math.floor(lastCheck / 5);
+    let col = lastCheck/5
+
+    let rowtreasure = Math.floor(treasureLocation%5);
+    let coltreasure = treasureLocation/5
+    let row_dif = row-rowtreasure
+    let col_dif = col-coltreasure
+    if(row_diff+col_diff<=1)
+    {
+      document.getElementById("help").innerHTML = "Can smell it"
+    }
+    else if (row_diff+col_diff<=2) {
+      document.getElementById("help").innerHTML = "Close Matie"
+    } else {
+      document.getElementById("help").innerHTML = "Step Faster"
+    }
+    penalty+=2
+    document.getElementById("penalty").innerHTML = "Penalty is "+penalty
+    // if((row+1==rowtreasure || row-1==rowtreasure) &&(col==coltreasure )){
+    //   document.getElementById("help").innerHTML = "Can smell it"
+    // }
+    // else if((col+1==rowtreasure || col-1==coltreasure) &&(row==rowtreasure )){
+    //   document.getElementById("help").innerHTML = "Can smell it"
+    // }
+    // else if()
+  }
+</script>
 </html>
