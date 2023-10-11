@@ -34,11 +34,11 @@
 
 <body>
 	<h2 style="text-align: center;">Thirupathi builds a merger</h2>
-	<input id="text_field" type="text">
+	<label for="text_field">Enter Text</label><input id="text_field" type="text">
 	<button onclick="addEnd()">Add end</button>
-	<br><br>
 	<button onclick="addFront()">Add front</button>
 	<button onclick="remove()">Remove</button>
+	<br><br>
 	<div class="flex-container" id="target">
 		<div class="merger">row item 1</div>
 		<div class="merger">row item 2</div>
@@ -53,6 +53,7 @@
 		let element = document.createElement("div")
 		let text=document.getElementById("text_field").value
 		element.innerHTML = text
+		element.className = "merger"
 		/* add it to the container */
 		let container = document.getElementById('target')
 		container.appendChild(element)
@@ -70,6 +71,7 @@
 		let element = document.createElement("div")
 		let text=document.getElementById("text_field").value
 		element.innerHTML = text
+		element.className = "merger"
 		let container = document.getElementById('target')
 
 		container.insertBefore(element,container.firstChild)
