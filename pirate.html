@@ -28,6 +28,7 @@
 <div id="penalty">Penalty is zero.</div>
 <div onclick="help()" style="text-decoration:underline;">Click for help </div>
 <div id="help">Help report</div>
+<button onclick="reset()">New Game</button>
 <div class="container" style="width: 500px; height: 500px;">
 <div class="row">
   <div class="col-sm"><img id="img0" onclick="check(0)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
@@ -122,6 +123,24 @@
     penalty+=2
     document.getElementById("penalty").innerHTML = "Penalty is "+penalty
 
+  }
+  function reset() {
+    lastCheck=0;
+    checkCount=0;
+    penalty=0;
+    gameOver=false;
+    trapLocation=Math.floor(Math.random()*25)
+    treasureLocation=Math.floor(Math.random()*25)
+    while (trapLocation==treasureLocation) {
+      treasureLocation=Math.floor(Math.random()*25)
+    }
+    for (let i = 0; i < ids.length; i++) {
+      let imid=ids[i];
+        document.getElementById(imid).src = 'tressure_start.jpg';
+    }
+    document.getElementById("penalty").innerHTML = "Penalty is "+penalty
+    document.getElementById("locations").innerHTML = "Number of locations checked is "+checkCount
+    document.getElementById('help').innerHTML = "Help report"
   }
 </script>
 </html>
