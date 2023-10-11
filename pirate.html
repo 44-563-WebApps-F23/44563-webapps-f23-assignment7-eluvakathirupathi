@@ -95,38 +95,32 @@
       gameOver = true
       penalty+=4
     } else {
-      
+      document.getElementById(imgid).src="No_treasure.jpg"
     }
     lastCheck=position
-    document.getElementById("locations").innerHTML = "Number of locations checked is "+lastCheck
+    document.getElementById("locations").innerHTML = "Number of locations checked is "+checkCount
     document.getElementById("penalty").innerHTML = "Penalty is "+penalty
   }
   function help() {
-    let row = Math.floor(lastCheck / 5);
-    let col = lastCheck/5
+    let row = Math.floor(lastCheck/5);
+    let col = lastCheck%5
 
-    let rowtreasure = Math.floor(treasureLocation%5);
-    let coltreasure = treasureLocation/5
-    let row_dif = row-rowtreasure
-    let col_dif = col-coltreasure
-    if(row_diff+col_diff<=1)
+    let rowtreasure = Math.floor(treasureLocation/5);
+    let coltreasure = treasureLocation%5
+    let row_dif = Math.abs(row-rowtreasure)
+    let col_dif = Math.abs(col-coltreasure)
+    if(row_dif+col_dif<=1)
     {
-      document.getElementById("help").innerHTML = "Can smell it"
+      document.getElementById('help').innerHTML = "Can smell it"
     }
-    else if (row_diff+col_diff<=2) {
-      document.getElementById("help").innerHTML = "Close Matie"
+    else if (row_dif+col_dif<=2) {
+      document.getElementById('help').innerHTML = "Close Matie"
     } else {
-      document.getElementById("help").innerHTML = "Step Faster"
+      document.getElementById('help').innerHTML = "Step Faster"
     }
     penalty+=2
     document.getElementById("penalty").innerHTML = "Penalty is "+penalty
-    // if((row+1==rowtreasure || row-1==rowtreasure) &&(col==coltreasure )){
-    //   document.getElementById("help").innerHTML = "Can smell it"
-    // }
-    // else if((col+1==rowtreasure || col-1==coltreasure) &&(row==rowtreasure )){
-    //   document.getElementById("help").innerHTML = "Can smell it"
-    // }
-    // else if()
+
   }
 </script>
 </html>
