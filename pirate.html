@@ -26,8 +26,8 @@
 <div><b>Click on the locations to search for treasure, beware the traps</b></div>
 <div id="locations">Number of locations checked is zero.</div>
 <div id="penalty">Penalty is zero.</div>
-<div>check for help.</div>
-<div id="help" onclick="help()" style="color: green;">Help report</div>
+<div onclick="help()" style="text-decoration:underline;">Click for help </div>
+<div id="help">Help report</div>
 <div class="container" style="width: 500px; height: 500px;">
 <div class="row">
   <div class="col-sm"><img id="img0" onclick="check(0)" class="object-fit-fill border rounded"  src="tressure_start.jpg" width="100px" height="100px" ></div>
@@ -80,22 +80,23 @@
   function check(position) {
     if(gameOver)
     {
-      return 0;
+      return;
     }
     let imgid = ids[position]
+    let element = document.getElementById(imgid)
     checkCount++
     penalty++
     if (position==treasureLocation) {
-      document.getElementById(imgid).src="Won_Treasure.jpg"
+      element.src="Won_Treasure.jpg"
       gameOver = true
       penalty-=3
     }
     else if (position==trapLocation) {
-      document.getElementById(imgid).src="Danger.jpg"
+      element.src="Danger.jpg"
       gameOver = true
       penalty+=4
     } else {
-      document.getElementById(imgid).src="No_treasure.jpg"
+      element.src="No_treasure.jpg"
     }
     lastCheck=position
     document.getElementById("locations").innerHTML = "Number of locations checked is "+checkCount
