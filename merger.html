@@ -38,6 +38,8 @@
 	<button onclick="addEnd()">Add end</button>
 	<button onclick="addFront()">Add front</button>
 	<button onclick="remove()">Remove</button>
+	<button onclick="swap()">Swap</button>
+	<div id="noswap"></div>
 	<br><br>
 	<div class="flex-container" id="target">
 		<div class="merger">row item 1</div>
@@ -51,7 +53,7 @@
 	function addEnd() {
 		/* make the div and its text */
 		let element = document.createElement("div")
-		let text=document.getElementById("text_field").value
+		let text = document.getElementById("text_field").value
 		element.innerHTML = text
 		element.className = "merger"
 		/* add it to the container */
@@ -62,21 +64,39 @@
 	function remove() {
 		let mergerItems = document.getElementsByClassName("merger")
 		let len = mergerItems.length
-		if(len > 0){
-			let index = Math.floor(len/2)
+		if (len > 0) {
+			let index = Math.floor(len / 2)
 			mergerItems[index].remove()
 		}
 	}
 	function addFront() {
 		let element = document.createElement("div")
-		let text=document.getElementById("text_field").value
+		let text = document.getElementById("text_field").value
 		element.innerHTML = text
 		element.className = "merger"
 		let container = document.getElementById('target')
 
-		container.insertBefore(element,container.firstChild)
+		container.insertBefore(element, container.firstChild)
 	}
+	function swap() {
 
+		let container = document.getElementById('target')
+		let mergeritem = document.getElementsByClassName("merger");
+		if (mergeritem.length >= 2) {
+			let swap1 = Math.floor(Math.random() * mergeritem.length);
+			let swap2 = Math.floor(Math.random() * mergeritem.length);
+			while (swap1 == swap2) {
+				swap2 = Math.floor(Math.random() * items.length);
+			}
+			let element1 = mergeritem[swap1];
+			let element2 = mergeritem[swap2];
+			container.insertBefore(element2, element1);
+			document.getElementById("noswap").innerHTML="swapped"+swap1+"and"+swap2
+		}
+		else{
+			document.getElementById("noswap").innerHTML="Only single div is present cannot be swapped"
+		}
+	}
 </script>
 
 </html>
